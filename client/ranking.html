@@ -74,24 +74,22 @@
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                     <div class="page-heading">
                         <h1>Arachne Ranking</h1>
-                        <hr class="small">
                         <form class="searchInput"  accept-charset="utf-8" name="user" method="get">
-                            <div class="input-group">
-                                <div class="input-group-btn">
-                                  <button id="messengerDropdownBtn" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"                          aria-expanded="false">Messenger <span class="caret"></span></button>
-                                  <ul id="messengerDropdown" class="dropdown-menu dropdown-menu-right" role="menu">
+                            <div class="input-group-btn">
+                                <button id="messengerDropdownBtn" type="button" class="btn  btn-default dropdown-toggle" data-toggle="dropdown"                           aria-expanded="false">Messenger <span class="caret"></span></button>
+                                <ul id="messengerDropdown" class="dropdown-menu     dropdown-menu-right" role="menu">
                                     <li><a href="#">kakao</a></li>
-                                  </ul>
-                                </div><!-- /btn-group -->
-                                <div class="input-group-btn">
-                                  <button id="gameDropdownBtn" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"                          aria-expanded="false" value='2048'>2048 <span class="caret"></span></button>
-                                  <ul id="gameDropdown" class="dropdown-menu dropdown-menu-right" role="menu">
+                                </ul>
+                            </div><!-- /btn-group -->
+                            <div class="input-group-btn">
+                                <button id="gameDropdownBtn" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"                          aria-expanded="false">GAME <span class="caret"></span></button>
+                                <ul id="gameDropdown" class="dropdown-menu dropdown-menu-right" role="menu">
                                     <li><a href="#">2048</a></li>
                                     <li><a href="#">Hextris</a></li>
-                                  </ul>
-                                </div><!-- /btn-group -->
-                                <input type="text" id='userNameInput' class="Rankingbox"   value='' placeholder="Player Nickname">
-                            </div>                                                            
+                                </ul>
+                            </div><!-- /btn-group -->
+                            <input type="text" id='userNameInput' class="Rankingbox"   value='' placeholder="Player Nickname">                   
+                            <button type="button" id='userNameInputBtn' class="btn btn-default">Search</button>                                                           
                         </form>
                         <span class="subheading">You can search player's ranking</span>
                     </div>
@@ -103,10 +101,11 @@
     <table id="rankingTable" class="table">
       <thead>
         <tr>
-          <th>Ranking</th>
-          <th>NICKNAME</th>
-          <th>MESSENGER</th>
+          <th>RANKING</th>
           <th>GAME</th>
+          <th>SCORE</th>
+          <th>NICKNAME</th>
+          <th>MESSENGER</th>  
         </tr>
       </thead>
       <tbody id="rankingTableBody">

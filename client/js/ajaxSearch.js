@@ -25,6 +25,9 @@ var url = "http://"+domain+":"+port;
             	console.log($("#gameDropdownBtn:first-child").val());
             	data["GAME_TITLE"] = $("#gameDropdownBtn:first-child").val()
             }
+            else{
+              alert("게임을 선택해주세요!");
+            }
             ajaxSearchRanking(data);        
         }
  
@@ -51,9 +54,10 @@ var url = "http://"+domain+":"+port;
       	for(var i=0; i<result.length; i++){
       		$('#rankingTableBody').append('<tr>'
       				+'<td>' + result[i].RANKING + '</td>'
+              +'<td>' + result[i].TITLE + '</td>'
+              +'<td>' + result[i].SCORE + '</td>'
       				+'<td>' + result[i].NICKNAME + '</td>'
-      				+'<td>' + result[i].MESSENGER + '</td>'
-      				+'<td>' + result[i].TITLE + '</td>'
+      				+'<td>' + result[i].MESSENGER + '</td>'		
       			+'</tr>'
       			)
       	}
