@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Project Arachne - Webgame Platform with messenger</title>
+    <!-- Bootstrap Core CSS -->
+    <link href="lib/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="lib/css/heroic-features.css" rel="stylesheet">
+    <link href="lib/css/customicon.css" rel="stylesheet">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Arachne</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="#">Games</a>
+                    </li>
+                    <li>
+                        <a href="#">Rankings</a>
+                    </li>
+                    <li>
+                        <a href="#">Network Supports</a>
+                    </li>
+                    <li>
+                        <a href="#">Register Game</a>
+                    </li>
+                    <li>
+                        <a href="https://a-better.github.io/">For Developer</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+    <!-- Page Content -->
+    <div class="container">
+
+        <!-- Jumbotron Header -->
+        <header class="jumbotron hero-spacer">
+            <h1>Arachne</h1>
+            <p>메신저 링크로 친구와 함꼐 다양한 웹게임을 즐겨보세요!<br/>게임을 등록하고 싶다면 상단의 Register Game을 누르세요</p>
+            <br/><p>개발자 관련 페이지로 가려면 상단의 For Developer를 누르세요</p>
+            <p><a class="btn btn-primary btn-large">Contact Us</a>
+            </p>
+        </header>
+
+        <hr>
+
+        <!-- Title -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h3>Our Web Games</h3>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Page Features -->
+        <div class="row text-center">
+            <div class="col-md-3 col-sm-6 hero-feature">
+                <div class="thumbnail">
+                    <img src="/images/catchmind.jpg" alt="">
+                    <div class="caption">
+                        <h3>캐치마인드</h3>
+                        <p>링크를 공유해서 지금 친구와 캐치마인드를 해보세요!</p>
+                        <p>
+                            <a  href="#" class="btn btn-primary gamemodal" data-id="catchmind" data-toggle="modal" data-target="#link_menu_div">링크 생성</a> <a href="#" class="btn btn-default">More Info</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6 hero-feature">
+                <div class="thumbnail">
+                    <img src="/images/mafia.jpg" alt="">
+                    <div class="caption">
+                        <h3>마피아(개발중)</h3>
+                        <p>수려한 픽셀아트와 함께 마피아 게임을 친구와 즐길수 있습니다!</p>
+                        <p>
+                            <a  href="#" class="btn btn-primary gamemodal" data-id="mafia" data-toggle="modal" data-target="#link_menu_div">링크 생성</a><a href="#" class="btn btn-default">More Info</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6 hero-feature">
+                <div class="thumbnail">
+                    <img src="http://placehold.it/800x500" alt="">
+                    <div class="caption">
+                        <h3>배틀 로얄(개발중)</h3>
+                        <p>턴 기반 MMO 생존게임을 설치 없이 즐길수 있습니다!</p>
+                        <p>
+                            <a href="#" class="btn btn-primary">링크 생성</a> <a href="#" class="btn btn-default">More Info</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 hero-feature">
+                <div class="thumbnail">
+                    <img src="http://placehold.it/800x500" alt="">
+                    <div class="caption">
+                        <h3>Web Tab Music with Youtube(개발중)</h3>
+                        <p>리듬게임을 설치없이 Youtube 동영상을 이용해 즐겨보세요!</p>
+                        <p>
+                            <a href="#" class="btn btn-primary" >링크 생성!</a> <a href="#" class="btn btn-default">More Info</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /.row -->
+		<div id="link_menu_div" class="modal fade" role="dialog">
+		  <div class="modal-dialog">	
+		    <!-- Modal content-->
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal">&times;		</button>
+		        <h4 class="modal-title">메신저 선택</h4>
+		      </div>
+		      <div class="modal-body">
+              <!-- main.js include class linkbtn-->
+		        <button type="button"  id="kakao" class="btn btn-secondary btn-block kakao-background white btn-custom linkbtn"><strong>카카오톡 링크 공유</strong></button>
+		        <button type="button"  id="line" class="btn btn-secondary btn-block line-background white btn-custom linkbtn"><strong>라인 링크 공유(개발중)</strong></button>
+		        <button type="button"  id="telegram" class="btn btn-secondary btn-block telegram-background white btn-custom linkbtn"><strong>텔레그램링크 공유(개발중)</strong></button>
+		        <textarea class="form-control" id="link" rows="1"></textarea>  
+              </div>
+		      <div class="modal-footer">
+		        <button type="button" id="modal_close_button" class="btn btn-default" data-dismiss="modal">Close</button>
+		      </div>
+		    </div>
+		
+		  </div>
+		</div>
+        <hr>
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Copyright &copy; 시조새 io 2016</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <!-- /.container -->
+    <!-- jQuery -->
+    <script src="lib/js/jquery-3.1.1.min.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="lib/js/bootstrap.min.js"></script>
+	<script src="https://cdn.socket.io/socket.io-1.3.2.js"></script>
+	<script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
+    <script src="/dist/main.bundle.js" ></script>
+</body>
+</html>
