@@ -54,12 +54,12 @@ window.url = 'http://'+document.domain + ':'+location.port + '/';
       'label' : "",
       'text'  : ""
     };
-    if(game == 'catchmind'){
+    if(game == 'Catchmind'){
        gameInfo.image = 'images/catchmind.jpg';
        gameInfo.label = '캐치마인드';
        gameInfo.text = '캐치마인드'
     }
-    else if(game == 'mafia'){
+    else if(game == 'Mafia'){
        gameInfo.image = 'images/mafia.jpg';
        gameInfo.label = '마피아';
        gameInfo.text = '마피아'
@@ -69,7 +69,7 @@ window.url = 'http://'+document.domain + ':'+location.port + '/';
        gameInfo.label = '2048';
        gameInfo.text = '2048'
     }
-    else if(game == 'Hetrix'){
+    else if(game == 'Hextris'){
       gameInfo.image = 'images/Hextris.jpg';
       gameInfo.label = 'Hextris';
       gameInfo.text = 'Hextris';
