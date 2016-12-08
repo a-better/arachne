@@ -74,6 +74,16 @@ window.url = 'http://'+document.domain + ':'+location.port + '/';
       gameInfo.label = 'Hextris';
       gameInfo.text = 'Hextris';
     }
+    else if(game == 'flappybird'){
+      gameInfo.image = 'images/flappy.png';
+      gameInfo.label = 'Flappybird';
+      gameInfo.text = 'Flappybird';     
+    }
+    else if(game == '0hh1'){
+      gameInfo.image = 'images/0hh1.jpg';
+      gameInfo.label = '0hh1';
+      gameInfo.text = '0hh1';        
+    }
     return gameInfo;
   }
   var sendKakaoLink  = function (gameInfo){
