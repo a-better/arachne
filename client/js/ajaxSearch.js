@@ -32,6 +32,22 @@ var url = "http://"+domain+":"+port;
         }
  
     });
+    $("#userNameInputBtn").click(function(){
+      var data = {};
+      data["NICKNAME"] = $("#userNameInput").val();
+      if($("#messengerDropdownBtn:first-child").val() != ''){
+        console.log($("#messengerDropdownBtn:first-child").val());
+        data["MESSENGER"] = $("#messengerDropdownBtn:first-child").val();
+      }
+      if($("#gameDropdownBtn:first-child").val() != ''){
+        console.log($("#gameDropdownBtn:first-child").val());
+        data["GAME_TITLE"] = $("#gameDropdownBtn:first-child").val()
+      }
+      else{
+        alert("게임을 선택해주세요!");
+      }
+      ajaxSearchRanking(data);        
+    })
 });
 
  var ajaxSearchRanking = function(data){
