@@ -115,7 +115,7 @@
 	       gameInfo.label = '2048';
 	       gameInfo.text = '2048'
 	    }
-	    else if(game == 'Hetrix'){
+	    else if(game == 'hextris'){
 	      gameInfo.image = 'images/Hextris.jpg';
 	      gameInfo.label = 'Hextris';
 	      gameInfo.text = 'Hextris';
