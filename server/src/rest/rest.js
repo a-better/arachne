@@ -89,7 +89,7 @@ Rest.prototype = {
 						if(data["MESSENGER"] && data["MESSENGER"] == result[i].MESSENGER){
 							messengerResult.push(result[i]);
 							if(data["NICKNAME"] && data["NICKNAME"] == result[i].NICKNAME){
-								messengerNicnameResult.push(result[i]);
+								messengerNicknameResult.push(result[i]);
 							}
 						}
 						else{
