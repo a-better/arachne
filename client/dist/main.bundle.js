@@ -97,6 +97,7 @@
 	      if(gameInfo.type == 'room'){
 	        if(messenger == 'kakao'){
 	          sendKakaoLink(gameInfo);
+	          engine.room.messenger = '';
 	        }
 	      }
 	      else if(gameInfo.type == 'single'){
