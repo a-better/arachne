@@ -14,8 +14,6 @@ $('.sendMessage').on('click', function(){
 });
 
 $('.sendScore').on('click', function(){
-	var score = $('.score-container').text();
-	var plusPos = score.indexOf("+");
-	var score = score.substring(0, plusPos);
+	var score = $('.best-container').text();
 	arachne.sendScore(score);	
 });

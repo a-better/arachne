@@ -38,7 +38,6 @@ var redirect = function(data){
   var form = document.login_form;
   form.user_data.value = data;
   form.messenger.value = 'kakao';
-  alert(document.getElementById('url').value);
   form.action = document.getElementById('url').value;
   form.method="post";
   form.submit();
@@ -56,7 +55,6 @@ var registerUser = function(user_data){
     "THUMBNAIL_IMAGE" : THUMBNAIL_IMAGE,
     "MESSENGER" : 'kakao'
   }
-  alert(body);
 
   $.ajax({
     url: "http://"+domain+":"+port +'/user',
@@ -64,7 +62,6 @@ var registerUser = function(user_data){
     datatype : 'json',
     data: body,
     success: function(result) {
-      alert(result);
       redirect(user_data);
     },
     error: function (XMLHttpRequest, textStatus, errorThrown) {
