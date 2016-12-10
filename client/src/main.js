@@ -7,13 +7,14 @@ window.url = 'http://'+document.domain + ':'+location.port + '/';
    engine.network.addServer('WEB', 'WEB');
    var button = document.getElementById("kakaoLink");
    var oldRoomId = '';
+   var gameInfo;
     $('.gamemodal').on("click", function () {
       engine.room.setGame($(this).data('id'));
       console.log(engine.room.game);
       engine.network.webServers['WEB'].createLink();
       var game = engine.room.game;
-      var gameInfo = chooseGame(game); 
-      sendLink(gameInfo);
+      gameInfo = chooseGame(game); 
+      pollRoomChange(gameInfo); 
       // $('#addBookDialog').modal('show');
     });
 
@@ -22,20 +23,20 @@ window.url = 'http://'+document.domain + ':'+location.port + '/';
      engine.room.setMessenger(messenger);
      console.log(engine.room.messenger);
      engine.network.webServers['WEB'].createLink();
-     pollRoomChange(); 
+     pollRoomChange(gameInfo); 
    });
 
 
-   var pollRoomChange = function(){
+   var pollRoomChange = function(gameInfo){
       setInterval(function(){
         if(engine.room.id != ''){
           if(oldRoomId == ''){
-             sendLink();
+             sendLink(gameInfo);
              oldRoomId = engine.room.id;
           }
           else{
              if(oldRoomId != engine.room.id){
-               sendLink();
+               sendLink(gameInfo);
                oldRoomId = engine.room.id;
              }
           }
