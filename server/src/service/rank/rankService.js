@@ -12,7 +12,7 @@ RankService.prototype.search = function(GAME_SEQID, USER_SEQID){
 		query = "select * from RANKING, USER, GAME where RANKING.GAME_SEQID = "
 				+ "'" + GAME_SEQID +"' AND RANKING.USER_SEQID = USER.SEQ_ID " 
 				+ "AND RANKING.GAME_SEQID = GAME.SEQ_ID" + 
-				" ORDER BY SCORE DESC";
+				" ORDER BY CAST(SCORE AS DECIMAL(10,2)) DESC";
 	}
 	else{
 		query = "select * from RANKING where USER_SEQID = "
