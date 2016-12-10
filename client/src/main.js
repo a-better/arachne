@@ -10,6 +10,10 @@ window.url = 'http://'+document.domain + ':'+location.port + '/';
     $('.gamemodal').on("click", function () {
       engine.room.setGame($(this).data('id'));
       console.log(engine.room.game);
+      engine.network.webServers['WEB'].createLink();
+      var game = engine.room.game;
+      var gameInfo = chooseGame(game); 
+      sendLink(gameInfo);
       // $('#addBookDialog').modal('show');
     });
 
@@ -40,10 +44,8 @@ window.url = 'http://'+document.domain + ':'+location.port + '/';
       }, 100);
    };
 
-  var sendLink = function(){
-      var game = engine.room.game;
-      var messenger = engine.room.messenger;
-      var gameInfo = chooseGame(game); 
+  var sendLink = function(gameInfo){
+      var messenger = engine.room.messenger;   
       document.getElementById('link').value = engine.room.url;
       if(gameInfo.type == 'room'){
         if(messenger == 'kakao'){
