@@ -91,44 +91,56 @@
 	      var messenger = engine.room.messenger;
 	      var gameInfo = chooseGame(game); 
 	      document.getElementById('link').value = engine.room.url;
-	      if(messenger == 'kakao'){
-	        sendKakaoLink(gameInfo);
+	      if(gameInfo.type == 'room'){
+	        if(messenger == 'kakao'){
+	          sendKakaoLink(gameInfo);
+	        }
+	      }
+	      else if(gameInfo.type == 'single'){
+	        redirect();
 	      }     
 	  };
 	  var chooseGame = function(game){
 	    var gameInfo = {'image' : "", 
 	      'label' : "",
-	      'text'  : ""
+	      'text'  : "",
+	      'type' : ""
 	    };
 	    if(game == 'catchmind'){
 	       gameInfo.image = 'images/catchmind.jpg';
 	       gameInfo.label = '캐치마인드';
-	       gameInfo.text = '캐치마인드'
+	       gameInfo.text = '캐치마인드';
+	       gameInfo.type = 'room';
 	    }
 	    else if(game == 'mafia'){
 	       gameInfo.image = 'images/mafia.jpg';
 	       gameInfo.label = '마피아';
-	       gameInfo.text = '마피아'
+	       gameInfo.text = '마피아';
+	       gameInfo.type = 'room';
 	    }
 	    else if(game == '2048'){
 	       gameInfo.image = 'img/2048b.png';
 	       gameInfo.label = '2048';
-	       gameInfo.text = '2048'
+	       gameInfo.text = '2048';
+	       gameInfo.type = 'single';
 	    }
 	    else if(game == 'hextris'){
 	      gameInfo.image = 'images/Hextris.jpg';
 	      gameInfo.label = 'Hextris';
 	      gameInfo.text = 'Hextris';
+	      gameInfo.type = 'single';
 	    }
 	    else if(game == 'flappybird'){
 	      gameInfo.image = 'images/flappy.png';
 	      gameInfo.label = 'Flappybird';
-	      gameInfo.text = 'Flappybird';     
+	      gameInfo.text = 'Flappybird';  
+	      gameInfo.type = 'single';   
 	    }
 	    else if(game == '0hh1'){
 	      gameInfo.image = 'images/0hh1.jpg';
 	      gameInfo.label = '0hh1';
-	      gameInfo.text = '0hh1';        
+	      gameInfo.text = '0hh1';
+	      gameInfo.type = 'single';        
 	    }
 	    return gameInfo;
 	  }
@@ -145,7 +157,12 @@
 	            url:  engine.room.url// 앱 설정의 웹 플랫폼에 등록한 도메인의 URL이어야 합니다.
 	          }
 	        }); 
-	   }
+	  }
+
+	  var redirect = function(){
+	    location.href = engine.room.url;
+	  }
+
 
 /***/ },
 /* 1 */
