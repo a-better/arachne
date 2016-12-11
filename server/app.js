@@ -64,7 +64,7 @@ app.get('/:roomId', function(req, res){
 	var link = engine.linkService.links[req.params.roomId];
 	var key = req.params.roomId;
 	if(typeof link == 'undefined'){
-		res.send('<script type="text/javascript">alert("방이 없습니다.");location.href="http://'+ ip + ':'+ port + '/"</script>');
+		res.send('<script type="text/javascript">alert("방이 없습니다.");location.href="http://archaeopteryx.io/"</script>');
 	}
 	else{
 		console.log(link.URL);
