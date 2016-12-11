@@ -1,3 +1,4 @@
+
 var KakaoModule = require('./src/kakao/kakaoModule');
 var Game = require('./src/game/game');
 var domain = document.domain;
